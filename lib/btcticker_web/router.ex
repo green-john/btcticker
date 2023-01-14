@@ -17,7 +17,7 @@ defmodule BtctickerWeb.Router do
   scope "/", BtctickerWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
+    live "/", TickerLive
   end
 
   # Other scopes may use custom stacks.
