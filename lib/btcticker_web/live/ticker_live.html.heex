@@ -1,3 +1,13 @@
-<div>
-Current Price: <%= @current_price %>
+<div class="flex items-center justify-center h-screen w-full">
+  <div class="items-center justify-center shadow-xl text-amber-500 py-10 px-60">
+    <div>
+      <p class="flex items-end">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/1024px-Bitcoin.svg.png" class="w-12 inline" alt="Btc logo">
+        <span class="text-6xl">Bitcoin</span>
+        <span>BTC</span>
+      </p>
+
+      <p class="rounded text-6xl border border-amber-500 my-5 p-5">$ <%= @current_price %></p>
+    </div>
+  </div>
 </div>

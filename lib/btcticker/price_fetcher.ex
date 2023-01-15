@@ -8,14 +8,14 @@ defmodule Btcticker.PriceFetcher do
 
     case HTTPoison.get(url) do
       {:ok, resp} -> extractPrice(resp.body)
-      error -> error
+      error -> IO.inspect(error)
     end
   end
 
   defp extractPrice(rawBody) do
     case Jason.decode(rawBody) do
       {:ok, body} -> {:ok, body["bitcoin"]["usd"]}
-      error -> error
+      error -> IO.inspect(error)
     end
   end
 end
